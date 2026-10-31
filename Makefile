@@ -12,7 +12,7 @@ PRX_EXPORTS = exports.exp
 #USE_KERNEL_LIBC = 0
 #USE_PSPSDK_LIBC = 1
 USE_KERNEL_LIBS = 1
-
+USE_KERNEL_LIBC = 1
 # use built-in libc to supply sprintf for ppsspp and atoi in general
 LIBS = -lc -lpspsystemctrl_kernel
 
