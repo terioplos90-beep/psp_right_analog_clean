@@ -643,7 +643,7 @@ void init(){
 }
 
 int OnModuleStart(SceModule2 *mod) {
-    init(0);
+    init();
 
 	if (!previous)
 	return 0;
@@ -652,7 +652,7 @@ int OnModuleStart(SceModule2 *mod) {
 }
 
 static void CheckModules() {
-	init(1);
+	init();
 }
 
 int module_start(SceSize args, void *argp) {
