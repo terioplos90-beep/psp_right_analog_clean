@@ -28,7 +28,29 @@
 #include <string.h>
 
 #include <systemctrl.h>
+int atoi(const char *s) {
+    int value = 0;
+    int sign = 1;
 
+    if (!s) return 0;
+
+    while (*s == ' ' || *s == '\t' || *s == '\n')
+        s++;
+
+    if (*s == '-') {
+        sign = -1;
+        s++;
+    } else if (*s == '+') {
+        s++;
+    }
+
+    while (*s >= '0' && *s <= '9') {
+        value = value * 10 + (*s - '0');
+        s++;
+    }
+
+    return value * sign;
+}
 #define MODULE_NAME "ra2d"
 
 PSP_MODULE_INFO(MODULE_NAME, 0x1007, 1, 0);
